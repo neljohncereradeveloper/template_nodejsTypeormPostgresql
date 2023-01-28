@@ -1,0 +1,17 @@
+@host = http://localhost:3001/api
+#########
+######### Retrieve all accounts
+#########
+GET {{host}}/account 
+content-type: application/json
+#########
+######### Update account
+######### query = id
+PUT {{host}}/account?id=ca64bbcf-c172-4659-aee8-4b661e474054
+content-type: application/json
+
+{
+    "accesslevel": "Level 3",
+    "email": "dianne@gmail.com",
+    "mobilenumber": "09457062222"
+}

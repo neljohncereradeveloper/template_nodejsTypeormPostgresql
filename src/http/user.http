@@ -1,0 +1,38 @@
+@host = http://localhost:3001/api
+#########
+######### Retrieve all users
+#########
+GET {{host}}/user 
+content-type: application/json
+#########
+######### Search user by fullname
+######### query = fullname
+GET {{host}}/user/search?fullname=Neljohn R Cerer
+content-type: application/json
+#########
+######### Insert user
+#########
+POST {{host}}/user 
+content-type: application/json
+
+{
+    "fullname": "Dianne Ramos",
+    "gender": "Female",
+    "birthdate": "2000-04-11",
+    "address": "Toril Davao City",
+    "accesslevel": "Level 1",
+    "email": "dianne@gmail.com",
+    "mobilenumber": "09457065592"
+}
+#########
+######### Update user
+######### query = id
+PUT {{host}}/user?id=39dc1e3c-089b-4781-9f75-9a4205997609
+content-type: application/json
+
+{
+    "fullname": "Neljohn R Cerera",
+    "gender": "Male",
+    "birthdate": "1993-08-19",
+    "address": "Toril Davao City"
+}
